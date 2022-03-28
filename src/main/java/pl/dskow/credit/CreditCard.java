@@ -3,17 +3,17 @@ package pl.dskow.credit;
 import java.math.BigDecimal;
 
 public class CreditCard {
+    private BigDecimal initialLimit;
 
-    private BigDecimal creditLimit;
+    public void assignCreditLimit(BigDecimal newCreditLimit) {
+        if (this.initialLimit == null) {
+            throw new CantAssignLimtiTwiceException();
+        }
+        this.initialLimit = newCreditLimit;
 
-    public void assignLimit(BigDecimal newCreditLimit){
-        if(creditLimit != null){
-            throw new CantAsssingLimitTwiceExeption();
-        };
-        this.creditLimit = newCreditLimit;
     }
 
     public BigDecimal getBalance() {
-        return creditLimit;
+        return initialLimit;
     }
 }

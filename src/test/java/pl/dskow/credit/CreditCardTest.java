@@ -2,45 +2,54 @@ package pl.dskow.credit;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 
 public class CreditCardTest {
+
     @Test
-    void itAllowsToAssignCreditLimit() {
-        //A Arrange / Given
+    void itAllowsToAssignLimitToCreditCard() {
+        //A Arrange // Given
         CreditCard creditCard = new CreditCard();
-        //A Act / When
-        creditCard.assignLimit(BigDecimal.valueOf(1000));
-        //A Assert / Then / Expected
-        assertEquals(BigDecimal.valueOf(1000),creditCard.getBalance());
+
+        //A Act     // When
+        creditCard.assignCreditLimit(BigDecimal.valueOf(1000));
+
+        //A Assert  // Then / Expected
+        assertEquals(BigDecimal.valueOf(1000), creditCard.getBalance());
     }
 
     @Test
-    void itAllowsToAssignDifferentCreditLimit() {
-        //A Arrange / Given
+    void itAllowsToAssignDifferentLimitToCreditCard() {
+        //A Arrange // Given
         CreditCard creditCard = new CreditCard();
-        //A Act / When
-        creditCard.assignLimit(BigDecimal.valueOf(2000));
-        //A Assert / Then / Expected
-        assertEquals(BigDecimal.valueOf(2000),creditCard.getBalance());
+        //A Act     // When
+        creditCard.assignCreditLimit(BigDecimal.valueOf(2000));
+        //A Assert  // Then / Expected
+        assertEquals(BigDecimal.valueOf(2000), creditCard.getBalance());
     }
 
     @Test
-    void itDenyToAssignCreditLimitTwiceV1() {
+    void itDenyToAssignLimitTwice() {
         CreditCard creditCard = new CreditCard();
-        creditCard.assignLimit(BigDecimal.valueOf(2000));
-        try{
-            creditCard.assignLimit(BigDecimal.valueOf(2000));
-            fail("It should throw excepction");
-        }catch(CantAsssingLimitTwiceExeption e){
+        creditCard.assignCreditLimit(BigDecimal.valueOf(2000));
+
+        try {
+            creditCard.assignCreditLimit(BigDecimal.valueOf(2000));
+            fail("it should throw exception");
+        } catch (CantAssignLimtiTwiceException e) {
             assertTrue(true);
-        };
+        }
     }
 
     @Test
-    void itDenyToAssignCreditLimitTwiceV2() {
+    void itDenyToAssignLimitTwiceV2() {
         CreditCard creditCard = new CreditCard();
-        creditCard.assignLimit(BigDecimal.valueOf(2000));
-        assertThrows(CantAsssingLimitTwiceExeption.class, () -> {creditCard.assignLimit(BigDecimal.valueOf(2000));});
+        creditCard.assignCreditLimit(BigDecimal.valueOf(2000));
+
+        assertThrows(CantAssignLimtiTwiceException.class, () -> {
+            creditCard.assignCreditLimit(BigDecimal.valueOf(2000));
+        });
     }
+
 }
