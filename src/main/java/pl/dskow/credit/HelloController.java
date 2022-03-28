@@ -20,7 +20,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     String hello() {
-        return "Hi Dominik !!!";
+        return "Hi 5 Kuba !!!";
     }
 }
-

@@ -1,5 +1,6 @@
 package pl.dskow.credit;
 
+
 import java.util.Arrays;
 import java.util.List;
 
