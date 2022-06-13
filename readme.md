@@ -1,0 +1,7 @@
+{
+"status":{
+    "statusCode":"SUCCESS"
+    },
+ "redirectUri":"https://merch-prod.snd.payu.com/pay/?orderId=3DSQB7C1VZ220530GUEST000P01&token=eyJhbGciOiJIUzI1NiJ9.eyJvcmRlcklkIjoiM0RTUUI3QzFWWjIyMDUzMEdVRVNUMDAwUDAxIiwicG9zSWQiOiJvZzVIeTU5ZSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ0xJRU5UIl0sInBheWVyRW1haWwiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImV4cCI6MTY1Mzk5NzI2MywiaXNzIjoiUEFZVSIsImF1ZCI6ImFwaS1nYXRld2F5Iiwic3ViIjoiUGF5VSBzdWJqZWN0IiwianRpIjoiZGE3ZTA5NGEtNmNkNi00ZDRkLWJiZGYtYmU0Y2ZmYzNjZDNmIn0.X7mm-vI_AvrH0SusopZC7tjVXx0fl9FouvsDC-d__tw",
+ "orderId":"3DSQB7C1VZ220530GUEST000P01"
+ }
